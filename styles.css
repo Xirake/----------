@@ -37,6 +37,12 @@ header {
     text-decoration: none;
     margin: 0 20px;
 }
+.menu-pages-items-selected {
+    background-color: red;
+}
+.menu-pages-items:hover{
+    background-color: lightblue;
+}
 .menu-pages a:hover {
     text-decoration: underline;
 }
