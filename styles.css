@@ -1,0 +1,248 @@
+/* main */
+h2 {
+    
+    text-align: center;  /* Центрування тексту */
+    display: block;  /* Забезпечує повну ширину рядка */
+    width: 100%;  /* Ширина на весь контейнер */
+    font-size: 2em;  /* Збільшення розміру шрифту */
+    color: #333;  /* Колір тексту */
+    margin: 20px 0 5px;  /* Відступи зверху і знизу */
+    font-family: 'Arial', sans-serif;  /* Встановлення сімейства шрифту */
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+/* header */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.menu-pages {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.menu-pages-items {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+.menu-pages a:hover {
+    text-decoration: underline;
+}
+/* hello */
+.hello {
+max-width: 800px;  /* Обмеження максимальної ширини */
+    margin: 0 auto;  /* Центрування контейнера */
+    padding: 20px;  /* Внутрішні відступи */
+}
+
+/* restaraunt-menu */
+
+
+.restaraunt-menu-img-title {  width: 200px;  /* Ширина фото */
+    height: 200px; /* Висота фото */
+    border: 2px solid #333; /* Додаємо рамку для фото */
+    margin: 10px;}
+.restaraunt-menu {
+    display: flex;
+    flex-wrap: wrap;         /* Дозволяє переносити елементи на наступний рядок */
+    justify-content: center; /* Рівномірний розподіл між елементами */
+    padding: 20px;           /* Внутрішні відступи в секції */
+    gap: 20px; 
+    margin: auto;
+}
+
+.restaraunt-menu-img {
+    width: 200px;  /* Ширина фото */
+    height: 200px; /* Висота фото */
+    border: 2px solid #333; /* Додаємо рамку для фото */
+    margin: 10px;
+    object-fit: cover;
+}
+.restaraunt-menu-figure {
+    display: flex;
+    flex-direction: column;  /* Щоб підпис був під фото */
+    align-items: center;     /* Центрування по горизонталі */
+    width: 200px;
+}
+.restaraunt-menu-figcaption {
+    text-align: center;  /* Центрування тексту */
+    font-size: 1em;      /* Розмір шрифту */
+    color: #555;         /* Колір тексту */
+    word-wrap: break-word; /* Перенесення слів при потребі */
+    overflow-wrap: break-word; /* Додаткове перенесення */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* booking */
+.booking-form {
+    max-width: 400px;  /* Обмеження ширини форми */
+    margin: 0 auto;  /* Центрування на сторінці */
+    padding: 20px;  /* Внутрішні відступи */
+    border: 1px solid #ccc;  /* Рамка навколо форми */
+    background-color: #f9f9f9;  /* Легкий фон для виділення */
+}
+
+.booking-form h2 {
+    text-align: center;  /* Центрування заголовка */
+}
+
+.booking-form label {
+    display: block;  /* Розташування ярликів над полями */
+    margin-bottom: 8px;  /* Відступ під ярликом */
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 95%;  /* Поля займають всю ширину форми */
+    padding: 10px;  /* Внутрішні відступи в полях */
+    margin-bottom: 16px;  /* Відступ між полями */
+    border: 1px solid #ccc;  /* Рамка для полів */
+    border-radius: 4px;  /* Злегка заокруглені краї */
+}
+
+.booking-form button {
+    width: 100%;  /* Кнопка займає всю ширину */
+    padding: 10px;  /* Внутрішній відступ */
+    background-color: #333;  /* Темний колір кнопки */
+    color: white;  /* Білий текст на кнопці */
+    border: none;  /* Відсутність рамки */
+    border-radius: 4px;  /* Заокруглені краї */
+    cursor: pointer;  /* Курсор у вигляді руки при наведенні */
+}
+
+.booking-form button:hover {
+    background-color: #555;  /* Зміна кольору при наведенні */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT */
+
+.about-video {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+
+/* reviews */
+.reviews{
+   text-align: center;
+}
+.reviews-table {
+    display: block; 
+    margin: 0 auto; /* Центрування по горизонталі */
+    width: 50%; 
+    border-collapse: collapse;
+}
+.reviews-table-thead {
+
+}
+.reviews-table-tr {
+
+}
+.reviews-table-tr th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+/* Contacts */
+.contact-section {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.feedback-form {
+    max-width: 400px;
+}
+.feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.feedback-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.feedback-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.feedback-form button:hover {
+    background-color: #218838;
+}
+
+/* EVENTS */
+
+.intro-text {
+    color: #555;
+    margin-bottom: 20px;
+}
+.events-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.event-item {
+    margin-bottom: 10px;
+    color: #333;
+}
+.event-item a {
+    color: #1a73e8; /* Синій колір для посилань */
+    text-decoration: none; /* Прибираємо підкреслення у посилань */
+}
+.event-item a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
