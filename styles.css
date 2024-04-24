@@ -13,7 +13,30 @@ h2 {
 p {
     margin-bottom: 0px;
 }
+.invert-button {
+    padding: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+body {
+    background: linear-gradient(135deg, #1a1a1a, #333333); 
+  color: #ffffff;
+}
 
+/* Створюємо псевдоелемент, який накладається на всю сторінку */
+body.invert-bw::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Щоб псевдоелемент був зверху всіх інших елементів */
+    background-color: white; /* Це наш колір для інверсії */
+    mix-blend-mode: difference; /* Інверсія чорного і білого */
+    pointer-events: none; /* Щоб цей шар не впливав на взаємодію з елементами на сторінці */
+}
 /* header */
 
 body {
