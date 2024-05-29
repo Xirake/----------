@@ -1,18 +1,21 @@
 /* main */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 h2 {
     
-    text-align: center;  /* Центрування тексту */
-    display: block;  /* Забезпечує повну ширину рядка */
-    width: 100%;  /* Ширина на весь контейнер */
-    font-size: 2em;  /* Збільшення розміру шрифту */
-    color: #333;  /* Колір тексту */
-    margin: 20px 0 5px;  /* Відступи зверху і знизу */
-    font-family: 'Arial', sans-serif;  /* Встановлення сімейства шрифту */
+    text-align: center; 
+    display: block;  
+    width: 100%;  
+    font-size: 2em; 
+    color: #333;  
+    margin: 20px 0 5px;  
+    font-family: 'Arial', sans-serif; 
 }
 
-p {
-    margin-bottom: 0px;
-}
+
 .invert-button {
     padding: 10px;
     background-color: lightgray;
@@ -20,11 +23,16 @@ p {
     margin-bottom: 10px;
 }
 body {
+    width: 100%;
+    min-height: 100vh;
     background: linear-gradient(135deg, #1a1a1a, #333333); 
   color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Створюємо псевдоелемент, який накладається на всю сторінку */
+
 body.invert-bw::before {
     content: '';
     position: fixed;
@@ -32,85 +40,103 @@ body.invert-bw::before {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 9999; /* Щоб псевдоелемент був зверху всіх інших елементів */
-    background-color: white; /* Це наш колір для інверсії */
-    mix-blend-mode: difference; /* Інверсія чорного і білого */
-    pointer-events: none; /* Щоб цей шар не впливав на взаємодію з елементами на сторінці */
+    z-index: 9999; 
+    background-color: white;
+    mix-blend-mode: difference; 
+    pointer-events: none; 
 }
 /* header */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    
     text-align: center;
+}
+.theme {
+    padding: 10px 0 0 0;
+}
+header.index {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bg {
+    width: 110%;
+    height: 130%;
+    background: url(./images/back.jpg);
+    background-size: cover;
+    position: relative;
+}
+.waiter {
+    width: 600px;
+    height: 712px;
+    background: url(./images/waiter.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -100px;
+    left:  37%;
+    margin-top: 50px;
+}
+.theme-nav-text {
+    position: absolute;
+    left: 47%;
+    top: 5%;
+    transform: translate(-50%);
+    text-shadow: 5px 5px 15px #000000;
+    white-space: nowrap;
 }
 .menu-pages {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center; /* Щоб елементи центрувались */
+    
 }
 .menu-pages-items {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
+    margin: auto 2px;
 }
-.menu-pages-items-selected {
-    background-color: red;
-}
-.menu-pages-items:hover{
-    background-color: lightblue;
-}
-.menu-pages a:hover {
-    text-decoration: underline;
-}
+
 /* hello */
 .hello {
-max-width: 800px;  /* Обмеження максимальної ширини */
-    margin: 0 auto;  /* Центрування контейнера */
-    padding: 20px;  /* Внутрішні відступи */
+max-width: 800px;  
+    margin: 0 auto; 
+    padding: 20px;  
 }
 
 /* restaraunt-menu */
 
 
-.restaraunt-menu-img-title {  width: 200px;  /* Ширина фото */
-    height: 200px; /* Висота фото */
-    border: 2px solid #333; /* Додаємо рамку для фото */
+.restaraunt-menu-img-title {  width: 200px;  
+    height: 200px; 
+    border: 2px solid #333;
     margin: 10px;}
 .restaraunt-menu {
     display: flex;
-    flex-wrap: wrap;         /* Дозволяє переносити елементи на наступний рядок */
-    justify-content: center; /* Рівномірний розподіл між елементами */
-    padding: 20px;           /* Внутрішні відступи в секції */
+    flex-wrap: wrap;         
+    justify-content: center; 
+    
+    padding: 20px;         
     gap: 20px; 
     margin: auto;
 }
 
 .restaraunt-menu-img {
-    width: 200px;  /* Ширина фото */
-    height: 200px; /* Висота фото */
-    border: 2px solid #333; /* Додаємо рамку для фото */
+    width: 200px; 
+    height: 200px; 
+    border: 2px solid #333; 
     margin: 10px;
     object-fit: cover;
 }
 .restaraunt-menu-figure {
     display: flex;
-    flex-direction: column;  /* Щоб підпис був під фото */
-    align-items: center;     /* Центрування по горизонталі */
+    flex-direction: column;  
+    align-items: center;   
     width: 200px;
 }
 .restaraunt-menu-figcaption {
-    text-align: center;  /* Центрування тексту */
-    font-size: 1em;      /* Розмір шрифту */
-    color: #555;         /* Колір тексту */
-    word-wrap: break-word; /* Перенесення слів при потребі */
-    overflow-wrap: break-word; /* Додаткове перенесення */
+    text-align: center; 
+    font-size: 1em;     
+    color: #555;         
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
 }
 
 
@@ -129,44 +155,44 @@ max-width: 800px;  /* Обмеження максимальної ширини *
 
 /* booking */
 .booking-form {
-    max-width: 400px;  /* Обмеження ширини форми */
-    margin: 0 auto;  /* Центрування на сторінці */
-    padding: 20px;  /* Внутрішні відступи */
-    border: 1px solid #ccc;  /* Рамка навколо форми */
-    background-color: #f9f9f9;  /* Легкий фон для виділення */
+    max-width: 400px; 
+    margin: 0 auto;  
+    padding: 20px; 
+    border: 1px solid #ccc;  
+    background-color: #f9f9f9; 
 }
 
 .booking-form h2 {
-    text-align: center;  /* Центрування заголовка */
+    text-align: center; 
 }
 
 .booking-form label {
-    display: block;  /* Розташування ярликів над полями */
-    margin-bottom: 8px;  /* Відступ під ярликом */
+    display: block; 
+    margin-bottom: 8px; 
 }
 
 .booking-form input,
 .booking-form select,
 .booking-form textarea {
-    width: 95%;  /* Поля займають всю ширину форми */
-    padding: 10px;  /* Внутрішні відступи в полях */
-    margin-bottom: 16px;  /* Відступ між полями */
-    border: 1px solid #ccc;  /* Рамка для полів */
-    border-radius: 4px;  /* Злегка заокруглені краї */
+    width: 95%;  
+    padding: 10px; 
+    margin-bottom: 16px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
 }
 
 .booking-form button {
-    width: 100%;  /* Кнопка займає всю ширину */
-    padding: 10px;  /* Внутрішній відступ */
-    background-color: #333;  /* Темний колір кнопки */
-    color: white;  /* Білий текст на кнопці */
-    border: none;  /* Відсутність рамки */
-    border-radius: 4px;  /* Заокруглені краї */
-    cursor: pointer;  /* Курсор у вигляді руки при наведенні */
+    width: 100%; 
+    padding: 10px; 
+    background-color: #333; 
+    color: white;  
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
 }
 
 .booking-form button:hover {
-    background-color: #555;  /* Зміна кольору при наведенні */
+    background-color: #555;  
 }
 
 
@@ -190,25 +216,26 @@ max-width: 800px;  /* Обмеження максимальної ширини *
 
 
 /* reviews */
-.reviews{
-   text-align: center;
+.reviews {
+    width: 100%;
+    overflow-x: auto; /* Горизонтальний скролінг */
 }
+
 .reviews-table {
-    display: block; 
-    margin: 0 auto; /* Центрування по горизонталі */
-    width: 50%; 
-    border-collapse: collapse;
+    width: 100%; /* Задаємо повну ширину таблиці */
+    border-collapse: collapse; /* Злиття границь комірок */
 }
-.reviews-table-thead {
 
+.reviews-table thead {
+    background-color: #f2f2f2; /* Колір фону заголовка */
 }
-.reviews-table-tr {
 
-}
-.reviews-table-tr th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+.reviews-table th,
+.reviews-table td {
+    padding: 8px; /* Опціональна проміжна відстань */
+    border: 1px solid #ddd; /* Границі комірок */
+    white-space: nowrap; /* Заборона переносу тексту */
+    text-align: center; /* Вирівнювання тексту по центру */
 }
 /* Contacts */
 .contact-section {
@@ -269,9 +296,9 @@ max-width: 800px;  /* Обмеження максимальної ширини *
     color: #333;
 }
 .event-item a {
-    color: #1a73e8; /* Синій колір для посилань */
-    text-decoration: none; /* Прибираємо підкреслення у посилань */
+    color: #1a73e8;
+    text-decoration: none; 
 }
 .event-item a:hover {
-    text-decoration: underline; /* Підкреслення при наведенні */
+    text-decoration: underline; 
 }

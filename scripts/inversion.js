@@ -1,6 +1,8 @@
 const invertButton = document.getElementById('theme');
 const body = document.body;
 
+
+
 const getInvertStatus = () => {
     return localStorage.getItem('isInvertedBW') === 'true';
 };
@@ -16,6 +18,7 @@ if (isInvertedBW) {
 }
 
 invertButton.addEventListener('click', () => {
+    
     isInvertedBW = !isInvertedBW;
     if (isInvertedBW) {
         body.classList.add('invert-bw');
@@ -24,4 +27,5 @@ invertButton.addEventListener('click', () => {
     }
 
     setInvertStatus(isInvertedBW); 
+    console.log(getInvertStatus());
 });
