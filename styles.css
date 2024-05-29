@@ -62,14 +62,14 @@ header.index {
 .bg {
     width: 110%;
     height: 130%;
-    background: url(./images/back.jpg);
+    background: url(./images/back.webp);
     background-size: cover;
     position: relative;
 }
 .waiter {
     width: 600px;
     height: 712px;
-    background: url(./images/waiter.png);
+    background: url(./images/waiter.webp);
     background-repeat: no-repeat;
     position: absolute;
     bottom: -100px;
