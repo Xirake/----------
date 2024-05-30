@@ -47,12 +47,25 @@ body.invert-bw::before {
 }
 /* header */
 
+#theme {
+    font-size: 30px;
+}
 header {
     
     text-align: center;
+    padding-right: 25px ;
 }
-.theme {
-    padding: 10px 0 0 0;
+.menu-pages {
+    flex-wrap: wrap;
+    justify-content: center; /* Щоб елементи центрувались */
+    padding-right: 15px;
+    font-size: 20px;
+}
+.menu-pages-items {
+    margin: auto 2px;
+}
+.not-index {
+    padding-left: 28px;
 }
 header.index {
     width: 100%;
@@ -84,15 +97,7 @@ header.index {
     text-shadow: 5px 5px 15px #000000;
     white-space: nowrap;
 }
-.menu-pages {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Щоб елементи центрувались */
-    
-}
-.menu-pages-items {
-    margin: auto 2px;
-}
+
 
 /* hello */
 .hello {
@@ -209,11 +214,23 @@ max-width: 800px;
 /* ABOUT */
 
 .about-video {
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
+.about-us-image {
+    max-width: 80%; /* Зробити картинку адаптивною */
+    height: auto; /* Зберігає пропорції картинки */
+    margin-bottom: 10px;
+}
+
+.about-us-text {
+    max-width: 80%; /* Задаємо максимальну ширину текстового блоку */
+    margin: 0 auto; /* Центруємо текстовий блок */
+}
 
 /* reviews */
 .reviews {
